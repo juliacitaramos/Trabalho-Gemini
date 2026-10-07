@@ -1,0 +1,81 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #030308;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.glow-cyan {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.5);
+}
+.glow-emerald {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.8), 0 0 20px rgba(16, 185, 129, 0.5);
+}
+.glow-pink {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.5);
+}
+.glow-amber {
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.9), 0 0 25px rgba(245, 158, 11, 0.6);
+}
+
+.box-glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.35), inset 0 0 15px rgba(6, 182, 212, 0.15);
+}
+
+.glass-panel {
+    background: rgba(10, 15, 30, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(-8px, 6px) rotate(-1.5deg); }
+    40% { transform: translate(8px, -5px) rotate(1.5deg); }
+    60% { transform: translate(-5px, -3px) rotate(-0.5deg); }
+    80% { transform: translate(5px, 5px) rotate(1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+.shake-active {
+    animation: shake 0.25s ease-in-out;
+}
+
+@keyframes targetPulse {
+    0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.8)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 20px rgba(16, 185, 129, 1)); }
+}
+.target-pulse {
+    animation: targetPulse 1.2s infinite ease-in-out;
+}
+
+.cyber-btn {
+    position: relative;
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 50%, #7c3aed 100%);
+    transition: all 0.15s ease-out;
+}
+.cyber-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.8);
+}
+.cyber-btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0) scale(0.8); }
+    50% { transform: translateY(-30px) scale(1.2); }
+    100% { opacity: 0; transform: translateY(-60px) scale(1); }
+}
+.floating-text {
+    position: absolute;
+    pointer-events: none;
+    animation: floatUp 0.85s forwards ease-out;
+    z-index: 50;
+}
